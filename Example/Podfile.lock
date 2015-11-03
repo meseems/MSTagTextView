@@ -1,0 +1,14 @@
+PODS:
+  - MSTagTextView (0.1.0)
+
+DEPENDENCIES:
+  - MSTagTextView (from `../`)
+
+EXTERNAL SOURCES:
+  MSTagTextView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  MSTagTextView: 5367dd091ed0f1436e6fba64a1abb19a09cef874
+
+COCOAPODS: 0.38.2

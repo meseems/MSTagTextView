@@ -1,0 +1,6 @@
+framework module MSTagTextView {
+  umbrella header "MSTagTextView-umbrella.h"
+
+  export *
+  module * { export * }
+}

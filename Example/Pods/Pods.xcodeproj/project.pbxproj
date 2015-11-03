@@ -1,0 +1,783 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		31A2376F36895FB6B4759CB2EB202C0A /* Pods-MSTagTextView_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 46860927C8B0DD6BBA7AEAD25E87D617 /* Pods-MSTagTextView_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3822E1439B43A1CDF1E4F1BA86B37E60 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 224DB883962226EC872113954F986384 /* Foundation.framework */; };
+		4F000956DE4BE4462F6F85E8DD657262 /* Pods-MSTagTextView_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BB893ECA4B6C09DFB0DA7C4F75F67DBA /* Pods-MSTagTextView_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A638263CC5D6F1A62F5D606A2DB0157 /* MSTagTextView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CDBC053AE7A69F525246D4AE1A518857 /* MSTagTextView.bundle */; };
+		5AEC4152185EF6BF1D6EC723641C46B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 224DB883962226EC872113954F986384 /* Foundation.framework */; };
+		653023B37B9429DA4C4E47ED65A51F7B /* Pods-MSTagTextView_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DDF0315165CA337F7F3DD75402456698 /* Pods-MSTagTextView_Example-dummy.m */; };
+		7974885CD3E0E2AE562BDA9651616AFD /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B7AD0E370E30F376A6801D277FFC21C /* ReplaceMe.m */; };
+		8942FE051129C4EA85DFAF52D3E171F3 /* MSTagTextView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 06D9C22C9D28D4125188BE78C888D3C8 /* MSTagTextView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9EF0E5282CC7748BA3C5BE2B86E38F33 /* MSTagTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 28C48EBDF2B96EEE8B5056BB6B871E7A /* MSTagTextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA102534F84BF00AD1647675C261E405 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 224DB883962226EC872113954F986384 /* Foundation.framework */; };
+		C01FBD1A26BA6360AF371974BAE0E377 /* MSTagTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4260CE5D5E58A542A7FB5811E51929F5 /* MSTagTextView.m */; };
+		EA75560C1CFF3EBEF96C52383FE7ED96 /* Pods-MSTagTextView_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BD1D45F616FDA4E19453D151B9E61C7 /* Pods-MSTagTextView_Tests-dummy.m */; };
+		EE25DEB94DBEDE3FEF5B1611E1D443D6 /* MSTagTextView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 68F32D5BE0CBE52EAFA910C21EB649F0 /* MSTagTextView-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		27C6BCECDA62DFA5A496E5E672105C9E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3AAD3A8306DDB233718AFA56CBA72680;
+			remoteInfo = "MSTagTextView-MSTagTextView";
+		};
+		4ED1FC8639A91218694099734C5A0201 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 67A839D23F1B5EBC2FB47FBA93B3E5C8;
+			remoteInfo = MSTagTextView;
+		};
+		5E77C6EBE03D19C058B21CC8FC6A070C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 67A839D23F1B5EBC2FB47FBA93B3E5C8;
+			remoteInfo = MSTagTextView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		06D9C22C9D28D4125188BE78C888D3C8 /* MSTagTextView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MSTagTextView-umbrella.h"; sourceTree = "<group>"; };
+		1844B9A43521857098BCCFBB91BEC10D /* Pods-MSTagTextView_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MSTagTextView_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1954D4C4C73CED82245309EB446DAA94 /* Pods-MSTagTextView_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MSTagTextView_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		224DB883962226EC872113954F986384 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		274453C47E936BA91B244FB7C5B20731 /* Pods-MSTagTextView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MSTagTextView_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		28C48EBDF2B96EEE8B5056BB6B871E7A /* MSTagTextView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MSTagTextView.h; sourceTree = "<group>"; };
+		304BEB3177748D779809B584858E1D63 /* MSTagTextView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MSTagTextView-prefix.pch"; sourceTree = "<group>"; };
+		30EC3D1098D22225E407260A937E3FE6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33D5A47D28463A4D1CCA75124F484D62 /* Pods-MSTagTextView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MSTagTextView_Example.release.xcconfig"; sourceTree = "<group>"; };
+		3B7AD0E370E30F376A6801D277FFC21C /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ReplaceMe.m; sourceTree = "<group>"; };
+		40E1AE277DCCC2DF472B2E010086048F /* MSTagTextView-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "MSTagTextView-Private.xcconfig"; sourceTree = "<group>"; };
+		4260CE5D5E58A542A7FB5811E51929F5 /* MSTagTextView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MSTagTextView.m; sourceTree = "<group>"; };
+		44555592A8979B6BC0BB150AD2C92B72 /* Pods-MSTagTextView_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MSTagTextView_Example-resources.sh"; sourceTree = "<group>"; };
+		46860927C8B0DD6BBA7AEAD25E87D617 /* Pods-MSTagTextView_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MSTagTextView_Tests-umbrella.h"; sourceTree = "<group>"; };
+		4EBAE2711609DBDC3D19C732FD8AF059 /* MSTagTextView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MSTagTextView.xcconfig; sourceTree = "<group>"; };
+		585DF485113A651D886F4E1CE627537A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5983B117DD38BCF83F67D88A43A0D474 /* Pods-MSTagTextView_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MSTagTextView_Tests.modulemap"; sourceTree = "<group>"; };
+		6015D93F3258C6B647BD94AFD5C5613B /* MSTagTextView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MSTagTextView.modulemap; sourceTree = "<group>"; };
+		60C5DFDE4F6F6806C1A831D747B2DC13 /* Pods-MSTagTextView_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MSTagTextView_Example.modulemap"; sourceTree = "<group>"; };
+		68F32D5BE0CBE52EAFA910C21EB649F0 /* MSTagTextView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MSTagTextView-dummy.m"; sourceTree = "<group>"; };
+		72E0B68A1D97EC047A2C3F6D5D0AB8E0 /* Pods-MSTagTextView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MSTagTextView_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		7CC6CC5E19B2533A2877A075F962CB37 /* Pods-MSTagTextView_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MSTagTextView_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		7E8F2E7F62E8AD827FBB4A602EC3DE31 /* Pods_MSTagTextView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MSTagTextView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		80BFB08BBBDA845D3B08467EACA2C9F6 /* Pods-MSTagTextView_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MSTagTextView_Tests-resources.sh"; sourceTree = "<group>"; };
+		915C56D0283DA7946AB58532E19FC104 /* Pods-MSTagTextView_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MSTagTextView_Example-frameworks.sh"; sourceTree = "<group>"; };
+		9BD1D45F616FDA4E19453D151B9E61C7 /* Pods-MSTagTextView_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MSTagTextView_Tests-dummy.m"; sourceTree = "<group>"; };
+		A55207A0D16904F795C84B8432E46E43 /* Pods-MSTagTextView_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MSTagTextView_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		A854412F7B402D1B9A1BCC62C8D7FAD2 /* Pods_MSTagTextView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MSTagTextView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABAD171B300FAD363AE0E889D75CA04B /* Pods-MSTagTextView_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MSTagTextView_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		B9855E6C29B3D241880B605D8D2E0FD8 /* Pods-MSTagTextView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MSTagTextView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BB893ECA4B6C09DFB0DA7C4F75F67DBA /* Pods-MSTagTextView_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MSTagTextView_Example-umbrella.h"; sourceTree = "<group>"; };
+		CDBC053AE7A69F525246D4AE1A518857 /* MSTagTextView.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MSTagTextView.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBFC5F746F4863FC98235B5EEB6BA04E /* MSTagTextView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MSTagTextView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDF0315165CA337F7F3DD75402456698 /* Pods-MSTagTextView_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MSTagTextView_Example-dummy.m"; sourceTree = "<group>"; };
+		EE93285F3C59B55EFF5100D9BB9E3414 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		91EBD1377BC06574810F7FCE1AF7008B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B1B2A526FD73CEECCC57402E7C0CE76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AEC4152185EF6BF1D6EC723641C46B2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1E85150DF374AEF048377DEEAD1EF96 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA102534F84BF00AD1647675C261E405 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F53A629F850E7443A120244458C672EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3822E1439B43A1CDF1E4F1BA86B37E60 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		242A4F0783E0FEE3213767BF688DF3B0 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				893497E5AD84E5CB821E1E7B88D15259 /* Pods-MSTagTextView_Example */,
+				918BB82102ED98EBF8B2F928DBE9BBC4 /* Pods-MSTagTextView_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		53F661C0CA7190D2CF05023FB33D61E4 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				224DB883962226EC872113954F986384 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				D51C14AF6B01DB0A7CB474F63776E557 /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				CCA510CFBEA2D207524CDA0D73C3B561 /* Products */,
+				242A4F0783E0FEE3213767BF688DF3B0 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		81820F9BD6D4430FA94BB70D4AE92DB0 /* MSTagTextView */ = {
+			isa = PBXGroup;
+			children = (
+				DB9AA7DFFD23E63082EB41DCBBD09EC5 /* Pod */,
+				CD8D14A801F1088F5B2FA7FE106969D2 /* Support Files */,
+			);
+			name = MSTagTextView;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		893497E5AD84E5CB821E1E7B88D15259 /* Pods-MSTagTextView_Example */ = {
+			isa = PBXGroup;
+			children = (
+				EE93285F3C59B55EFF5100D9BB9E3414 /* Info.plist */,
+				60C5DFDE4F6F6806C1A831D747B2DC13 /* Pods-MSTagTextView_Example.modulemap */,
+				1844B9A43521857098BCCFBB91BEC10D /* Pods-MSTagTextView_Example-acknowledgements.markdown */,
+				A55207A0D16904F795C84B8432E46E43 /* Pods-MSTagTextView_Example-acknowledgements.plist */,
+				DDF0315165CA337F7F3DD75402456698 /* Pods-MSTagTextView_Example-dummy.m */,
+				915C56D0283DA7946AB58532E19FC104 /* Pods-MSTagTextView_Example-frameworks.sh */,
+				44555592A8979B6BC0BB150AD2C92B72 /* Pods-MSTagTextView_Example-resources.sh */,
+				BB893ECA4B6C09DFB0DA7C4F75F67DBA /* Pods-MSTagTextView_Example-umbrella.h */,
+				72E0B68A1D97EC047A2C3F6D5D0AB8E0 /* Pods-MSTagTextView_Example.debug.xcconfig */,
+				33D5A47D28463A4D1CCA75124F484D62 /* Pods-MSTagTextView_Example.release.xcconfig */,
+			);
+			name = "Pods-MSTagTextView_Example";
+			path = "Target Support Files/Pods-MSTagTextView_Example";
+			sourceTree = "<group>";
+		};
+		918BB82102ED98EBF8B2F928DBE9BBC4 /* Pods-MSTagTextView_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				585DF485113A651D886F4E1CE627537A /* Info.plist */,
+				5983B117DD38BCF83F67D88A43A0D474 /* Pods-MSTagTextView_Tests.modulemap */,
+				1954D4C4C73CED82245309EB446DAA94 /* Pods-MSTagTextView_Tests-acknowledgements.markdown */,
+				ABAD171B300FAD363AE0E889D75CA04B /* Pods-MSTagTextView_Tests-acknowledgements.plist */,
+				9BD1D45F616FDA4E19453D151B9E61C7 /* Pods-MSTagTextView_Tests-dummy.m */,
+				7CC6CC5E19B2533A2877A075F962CB37 /* Pods-MSTagTextView_Tests-frameworks.sh */,
+				80BFB08BBBDA845D3B08467EACA2C9F6 /* Pods-MSTagTextView_Tests-resources.sh */,
+				46860927C8B0DD6BBA7AEAD25E87D617 /* Pods-MSTagTextView_Tests-umbrella.h */,
+				B9855E6C29B3D241880B605D8D2E0FD8 /* Pods-MSTagTextView_Tests.debug.xcconfig */,
+				274453C47E936BA91B244FB7C5B20731 /* Pods-MSTagTextView_Tests.release.xcconfig */,
+			);
+			name = "Pods-MSTagTextView_Tests";
+			path = "Target Support Files/Pods-MSTagTextView_Tests";
+			sourceTree = "<group>";
+		};
+		A8B73DC158E19CC713EF9700740FC3F9 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				28C48EBDF2B96EEE8B5056BB6B871E7A /* MSTagTextView.h */,
+				4260CE5D5E58A542A7FB5811E51929F5 /* MSTagTextView.m */,
+				3B7AD0E370E30F376A6801D277FFC21C /* ReplaceMe.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				53F661C0CA7190D2CF05023FB33D61E4 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CDBC053AE7A69F525246D4AE1A518857 /* MSTagTextView.bundle */,
+				DBFC5F746F4863FC98235B5EEB6BA04E /* MSTagTextView.framework */,
+				A854412F7B402D1B9A1BCC62C8D7FAD2 /* Pods_MSTagTextView_Example.framework */,
+				7E8F2E7F62E8AD827FBB4A602EC3DE31 /* Pods_MSTagTextView_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CD8D14A801F1088F5B2FA7FE106969D2 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				30EC3D1098D22225E407260A937E3FE6 /* Info.plist */,
+				6015D93F3258C6B647BD94AFD5C5613B /* MSTagTextView.modulemap */,
+				4EBAE2711609DBDC3D19C732FD8AF059 /* MSTagTextView.xcconfig */,
+				40E1AE277DCCC2DF472B2E010086048F /* MSTagTextView-Private.xcconfig */,
+				68F32D5BE0CBE52EAFA910C21EB649F0 /* MSTagTextView-dummy.m */,
+				304BEB3177748D779809B584858E1D63 /* MSTagTextView-prefix.pch */,
+				06D9C22C9D28D4125188BE78C888D3C8 /* MSTagTextView-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/MSTagTextView";
+			sourceTree = "<group>";
+		};
+		D51C14AF6B01DB0A7CB474F63776E557 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				81820F9BD6D4430FA94BB70D4AE92DB0 /* MSTagTextView */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		DB9AA7DFFD23E63082EB41DCBBD09EC5 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				A8B73DC158E19CC713EF9700740FC3F9 /* Classes */,
+			);
+			path = Pod;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		07A12DF067C9CDEB588A90CD45F25D9D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				31A2376F36895FB6B4759CB2EB202C0A /* Pods-MSTagTextView_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		579D2809E159718E6CF644310B498A9B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8942FE051129C4EA85DFAF52D3E171F3 /* MSTagTextView-umbrella.h in Headers */,
+				9EF0E5282CC7748BA3C5BE2B86E38F33 /* MSTagTextView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5CDA2EC500D4C390ED34EF336FAC8CA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F000956DE4BE4462F6F85E8DD657262 /* Pods-MSTagTextView_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1A421025E5A9002028388D3039383B1C /* Pods-MSTagTextView_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 407988B3D805851EC739E000CA4AD12B /* Build configuration list for PBXNativeTarget "Pods-MSTagTextView_Example" */;
+			buildPhases = (
+				1F9F14AB04CBC4395A5BF6C4F41B6878 /* Sources */,
+				9B1B2A526FD73CEECCC57402E7C0CE76 /* Frameworks */,
+				C5CDA2EC500D4C390ED34EF336FAC8CA /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9E72A5D0F555558D27428209074E7B71 /* PBXTargetDependency */,
+			);
+			name = "Pods-MSTagTextView_Example";
+			productName = "Pods-MSTagTextView_Example";
+			productReference = A854412F7B402D1B9A1BCC62C8D7FAD2 /* Pods_MSTagTextView_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3AAD3A8306DDB233718AFA56CBA72680 /* MSTagTextView-MSTagTextView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01616AED4291B2699A5DEA0DCC49A10E /* Build configuration list for PBXNativeTarget "MSTagTextView-MSTagTextView" */;
+			buildPhases = (
+				0A9375C243731E3598B72C701B196A60 /* Sources */,
+				91EBD1377BC06574810F7FCE1AF7008B /* Frameworks */,
+				E6F7DB5D0AB62BD311032D6D65A3766A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MSTagTextView-MSTagTextView";
+			productName = "MSTagTextView-MSTagTextView";
+			productReference = CDBC053AE7A69F525246D4AE1A518857 /* MSTagTextView.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		67A839D23F1B5EBC2FB47FBA93B3E5C8 /* MSTagTextView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9495FB2DAAAEFF0EBCD805EE26D0308F /* Build configuration list for PBXNativeTarget "MSTagTextView" */;
+			buildPhases = (
+				D47D4F4AF32EBB92CB08B37DBDB0F0A1 /* Sources */,
+				C1E85150DF374AEF048377DEEAD1EF96 /* Frameworks */,
+				AE845FFE54BB38B3BEC1C063BA0C4CC9 /* Resources */,
+				579D2809E159718E6CF644310B498A9B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F0E61795CA56C6C41C133F4D7686A181 /* PBXTargetDependency */,
+			);
+			name = MSTagTextView;
+			productName = MSTagTextView;
+			productReference = DBFC5F746F4863FC98235B5EEB6BA04E /* MSTagTextView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E5AB92789A9789DF489A6064BC746345 /* Pods-MSTagTextView_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29FDC98DD6594C247329D91745D0AB0F /* Build configuration list for PBXNativeTarget "Pods-MSTagTextView_Tests" */;
+			buildPhases = (
+				ABFF770AC5C1E9C3F5EE237507C94AC9 /* Sources */,
+				F53A629F850E7443A120244458C672EE /* Frameworks */,
+				07A12DF067C9CDEB588A90CD45F25D9D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FC6A9D43A2305C125A6365E558A24B5B /* PBXTargetDependency */,
+			);
+			name = "Pods-MSTagTextView_Tests";
+			productName = "Pods-MSTagTextView_Tests";
+			productReference = 7E8F2E7F62E8AD827FBB4A602EC3DE31 /* Pods_MSTagTextView_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = CCA510CFBEA2D207524CDA0D73C3B561 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				67A839D23F1B5EBC2FB47FBA93B3E5C8 /* MSTagTextView */,
+				3AAD3A8306DDB233718AFA56CBA72680 /* MSTagTextView-MSTagTextView */,
+				1A421025E5A9002028388D3039383B1C /* Pods-MSTagTextView_Example */,
+				E5AB92789A9789DF489A6064BC746345 /* Pods-MSTagTextView_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AE845FFE54BB38B3BEC1C063BA0C4CC9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A638263CC5D6F1A62F5D606A2DB0157 /* MSTagTextView.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6F7DB5D0AB62BD311032D6D65A3766A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0A9375C243731E3598B72C701B196A60 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F9F14AB04CBC4395A5BF6C4F41B6878 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				653023B37B9429DA4C4E47ED65A51F7B /* Pods-MSTagTextView_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABFF770AC5C1E9C3F5EE237507C94AC9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA75560C1CFF3EBEF96C52383FE7ED96 /* Pods-MSTagTextView_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D47D4F4AF32EBB92CB08B37DBDB0F0A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE25DEB94DBEDE3FEF5B1611E1D443D6 /* MSTagTextView-dummy.m in Sources */,
+				C01FBD1A26BA6360AF371974BAE0E377 /* MSTagTextView.m in Sources */,
+				7974885CD3E0E2AE562BDA9651616AFD /* ReplaceMe.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9E72A5D0F555558D27428209074E7B71 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MSTagTextView;
+			target = 67A839D23F1B5EBC2FB47FBA93B3E5C8 /* MSTagTextView */;
+			targetProxy = 5E77C6EBE03D19C058B21CC8FC6A070C /* PBXContainerItemProxy */;
+		};
+		F0E61795CA56C6C41C133F4D7686A181 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "MSTagTextView-MSTagTextView";
+			target = 3AAD3A8306DDB233718AFA56CBA72680 /* MSTagTextView-MSTagTextView */;
+			targetProxy = 27C6BCECDA62DFA5A496E5E672105C9E /* PBXContainerItemProxy */;
+		};
+		FC6A9D43A2305C125A6365E558A24B5B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MSTagTextView;
+			target = 67A839D23F1B5EBC2FB47FBA93B3E5C8 /* MSTagTextView */;
+			targetProxy = 4ED1FC8639A91218694099734C5A0201 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		03CA91998D6773EC5D02B3DB87B8353E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0B57334D6C23DADAA4F7D802A5760EB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		23CF1AFECFCCF6B53C1DB53CF8C27B2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40E1AE277DCCC2DF472B2E010086048F /* MSTagTextView-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = MSTagTextView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		2E923DC5F75B4AC4E42B1FD7B0DDA5C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 274453C47E936BA91B244FB7C5B20731 /* Pods-MSTagTextView_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MSTagTextView_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-MSTagTextView_Tests/Pods-MSTagTextView_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_MSTagTextView_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		53FD9E4CA0AF9D8661357E61FAC1792C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33D5A47D28463A4D1CCA75124F484D62 /* Pods-MSTagTextView_Example.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MSTagTextView_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-MSTagTextView_Example/Pods-MSTagTextView_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_MSTagTextView_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6DC5D31DAD92DD386B1303C2DD4B5797 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40E1AE277DCCC2DF472B2E010086048F /* MSTagTextView-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 0.1.0;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 0.1.0;
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MSTagTextView/MSTagTextView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MSTagTextView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MSTagTextView/MSTagTextView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = MSTagTextView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		909279C7184752998AC14549161B7EDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9855E6C29B3D241880B605D8D2E0FD8 /* Pods-MSTagTextView_Tests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MSTagTextView_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-MSTagTextView_Tests/Pods-MSTagTextView_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_MSTagTextView_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9201270E243337249CCFB336FF9D8154 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72E0B68A1D97EC047A2C3F6D5D0AB8E0 /* Pods-MSTagTextView_Example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MSTagTextView_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-MSTagTextView_Example/Pods-MSTagTextView_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_MSTagTextView_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E8657A4C33DDF5908037630EA8EB4E9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40E1AE277DCCC2DF472B2E010086048F /* MSTagTextView-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 0.1.0;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 0.1.0;
+				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MSTagTextView/MSTagTextView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MSTagTextView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MSTagTextView/MSTagTextView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = MSTagTextView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F2EC31B46BEF504D2B80F962A9E0DDC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40E1AE277DCCC2DF472B2E010086048F /* MSTagTextView-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = MSTagTextView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		01616AED4291B2699A5DEA0DCC49A10E /* Build configuration list for PBXNativeTarget "MSTagTextView-MSTagTextView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				23CF1AFECFCCF6B53C1DB53CF8C27B2E /* Debug */,
+				F2EC31B46BEF504D2B80F962A9E0DDC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		29FDC98DD6594C247329D91745D0AB0F /* Build configuration list for PBXNativeTarget "Pods-MSTagTextView_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				909279C7184752998AC14549161B7EDC /* Debug */,
+				2E923DC5F75B4AC4E42B1FD7B0DDA5C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B57334D6C23DADAA4F7D802A5760EB2 /* Debug */,
+				03CA91998D6773EC5D02B3DB87B8353E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		407988B3D805851EC739E000CA4AD12B /* Build configuration list for PBXNativeTarget "Pods-MSTagTextView_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9201270E243337249CCFB336FF9D8154 /* Debug */,
+				53FD9E4CA0AF9D8661357E61FAC1792C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9495FB2DAAAEFF0EBCD805EE26D0308F /* Build configuration list for PBXNativeTarget "MSTagTextView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8657A4C33DDF5908037630EA8EB4E9A /* Debug */,
+				6DC5D31DAD92DD386B1303C2DD4B5797 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
