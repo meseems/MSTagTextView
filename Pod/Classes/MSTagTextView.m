@@ -15,10 +15,12 @@
     self = [super initWithCoder:aDecoder];
     if(self) {
         // setup text handling
-        NSTextStorage *textStorage = [[NSTextStorage alloc] initWithString:@"Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."];
+        NSTextStorage *textStorage = [[NSTextStorage alloc] init];
         
         // use our subclass of NSLayoutManager
         MyLayoutManager *textLayout = [[MyLayoutManager alloc] init];
+        textLayout.delegate = self;
+        textLayout.customDelegate = self;
         
         [textStorage addLayoutManager:textLayout];
 
@@ -33,6 +35,11 @@
     
 }
 
+-(void) reloadData;
+{
+    [self setDataSource:self.dataSource];
+}
+
 -(void)setDataSource:(id<MSTagTextViewDataSource>)dataSource
 {
     
@@ -44,20 +51,31 @@
     [self.textStorage setAttributedString:[[NSAttributedString alloc] initWithString:@"" attributes:nil]];
     
     for(int i = 0; i < [_dataSource tagTextViewNumberOfTags:self]; i++) {
-        NSString *tagString = [NSString stringWithFormat:@" %@ ",[_dataSource tagTextView:self stringForItemAtIndex:i]];
+        NSString *dataString = [_dataSource tagTextView:self stringForItemAtIndex:i];
+        NSString *tagString = [NSString stringWithFormat:@" %@ ",dataString];
+        NSUInteger lastCharacter = [self.textStorage length];
         [self.textStorage appendAttributedString:[[NSAttributedString alloc] initWithString:tagString]];
         [self.textStorage appendAttributedString:[[NSAttributedString alloc] initWithString:@" "]];
-        [self setTagWithString:tagString
-                      andColor:[_dataSource tagTextView:self colorForItemAtIndex:i]];
+        [self.textStorage addAttribute:NSBackgroundColorAttributeName
+                                 value:[_dataSource tagTextView:self colorForItemAtIndex:i]
+                                 range:NSMakeRange(lastCharacter+1, [dataString length])];
     }
 }
 
--(void) setTagWithString:(NSString*)aString andColor:(UIColor*)aColor
+- (CGFloat)layoutManager:(NSLayoutManager *)layoutManager lineSpacingAfterGlyphAtIndex:(NSUInteger)glyphIndex withProposedLineFragmentRect:(CGRect)rect
 {
-    
-    // set some background color to our text
-    [self.textStorage addAttribute:NSBackgroundColorAttributeName value:aColor range:[self.textStorage.string rangeOfString:aString]];
-//    [self.textStorage setAttributes:[NSDictionary dictionaryWithObject:aColor forKey:NSBackgroundColorAttributeName] range:[self.textStorage.string rangeOfString:aString]];
+    if([self.customDelegate respondsToSelector:@selector(tagTextView:tagSpacingForItemAtIndex:)]) {
+        return [self.customDelegate tagTextView:self tagSpacingForItemAtIndex:glyphIndex];
+    }
+    return 5; // For really wide spacing; pick your own value
+}
+
+- (CGFloat) layoutManager:(NSLayoutManager *)layoutManager tagPaddingForItemAtIndex:(NSUInteger)index
+{
+    if([self.customDelegate respondsToSelector:@selector(tagTextView:tagPaddingForItemAtIndex:)]) {
+        return [self.customDelegate tagTextView:self tagPaddingForItemAtIndex:index];
+    }
+    return 4; // For really wide spacing; pick your own value
 }
 
 @end
@@ -66,58 +84,75 @@
 
 - (void)fillBackgroundRectArray:(const CGRect *)rectArray count:(NSUInteger)rectCount forCharacterRange:(NSRange)charRange color:(UIColor *)color
 {
-    CGFloat radius = 8.; // change this to change corners radius
+    CGFloat radius = 4.; // change this to change corners radius
     
     CGMutablePathRef path = CGPathCreateMutable();
     
     // One line only
+    
+    CGFloat spacing = 0.;
+    CGFloat padding = 0.;
+    
+    if([self.customDelegate respondsToSelector:@selector(layoutManager:tagPaddingForItemAtIndex:)])
+        padding = [self.customDelegate layoutManager:self tagPaddingForItemAtIndex:0];
+    if([self.delegate respondsToSelector:@selector(layoutManager:lineSpacingAfterGlyphAtIndex:withProposedLineFragmentRect:)])
+        spacing = [self.delegate layoutManager:self lineSpacingAfterGlyphAtIndex:0 withProposedLineFragmentRect:CGRectZero];
+    
     if(rectCount == 1) {
-        CGFloat minX = CGRectGetMinX(rectArray[0]);
-        CGFloat maxX = CGRectGetMaxX(rectArray[0]);
+        CGFloat minX = CGRectGetMinX(rectArray[0])-padding;
+        CGFloat maxX = CGRectGetMaxX(rectArray[0])+padding;
         CGFloat minY = CGRectGetMinY(rectArray[0]);
-        CGFloat maxY = CGRectGetMaxY(rectArray[0]);
-        CGPathMoveToPoint(path, NULL, minX,minY+radius);
-        CGPathAddArcToPoint(path, NULL, minX,minY+radius, minX+radius,minY,radius);
-        CGPathAddArcToPoint(path, NULL, minX+radius,minY, minX+radius,minY,radius);
+        CGFloat maxY = CGRectGetMaxY(rectArray[0])-spacing;
+        CGPathMoveToPoint(path, NULL,   minX+radius,minY);
+        CGPathAddArcToPoint(path, NULL, minX,minY, minX, minY+radius, radius);
+        CGPathAddArcToPoint(path, NULL, minX,maxY, maxX-radius, maxY, radius);
+        CGPathAddArcToPoint(path, NULL, maxX,maxY, maxX, minY+radius, radius);
+        CGPathAddArcToPoint(path, NULL, maxX,minY, minX+radius, minY, radius);
+        CGPathCloseSubpath(path);
+    } else {
+        
+        // First rect
+        CGFloat minX = CGRectGetMinX(rectArray[0])-padding;
+        CGFloat maxX = CGRectGetMaxX(rectArray[0])+padding;
+        CGFloat minY = CGRectGetMinY(rectArray[0]);
+        CGFloat maxY = CGRectGetMaxY(rectArray[0])-spacing;
+        CGPathMoveToPoint(path, NULL,   minX+radius,minY);
+        CGPathAddArcToPoint(path, NULL, minX,minY, minX, minY+radius, radius);
+        CGPathAddArcToPoint(path, NULL, minX,maxY, maxX-radius, maxY, radius);
+        CGPathAddLineToPoint(path, NULL, maxX,maxY);
+        CGPathAddLineToPoint(path, NULL, maxX,minY);
+        CGPathCloseSubpath(path);
+        
+        for(int i = 1; i < rectCount-1; i++) {
+            minX = CGRectGetMinX(rectArray[i])-padding;
+            maxX = CGRectGetMaxX(rectArray[i])+padding;
+            minY = CGRectGetMinY(rectArray[i]);
+            maxY = CGRectGetMaxY(rectArray[i])-spacing;
+            CGPathMoveToPoint(path, NULL,   minX,minY);
+            CGPathAddLineToPoint(path, NULL,   minX,maxY);
+            CGPathAddLineToPoint(path, NULL,   maxX,maxY);
+            CGPathAddLineToPoint(path, NULL,   maxX,minY);
+            CGPathCloseSubpath(path);
+        }
+        
+        // Last rect
+        minX = CGRectGetMinX(rectArray[rectCount-1])-padding;
+        maxX = CGRectGetMaxX(rectArray[rectCount-1])+padding;
+        minY = CGRectGetMinY(rectArray[rectCount-1]);
+        maxY = CGRectGetMaxY(rectArray[rectCount-1])-spacing;
+        CGPathMoveToPoint(path, NULL,   minX,minY);
+        CGPathAddLineToPoint(path, NULL,    minX,maxY);
+        CGPathAddArcToPoint(path, NULL, maxX,maxY, maxX, minY+radius, radius);
+        CGPathAddArcToPoint(path, NULL, maxX,minY, minX+radius, minY, radius);
         CGPathCloseSubpath(path);
     }
-    
-//    if (rectCount == 1
-//        || (rectCount == 2 && (CGRectGetMaxX(rectArray[1]) < CGRectGetMinX(rectArray[0])))
-//        )
-//    {
-//        // 1 rect or 2 rects without edges in contact
-//        
-//        CGPathAddRect(path, NULL, CGRectInset(rectArray[0], halfLineWidth, halfLineWidth));
-//        if (rectCount == 2)
-//            CGPathAddRect(path, NULL, CGRectInset(rectArray[1], halfLineWidth, halfLineWidth));
-//    }
-//    else
-//    {
-//        // 2 or 3 rects
-//        NSUInteger lastRect = rectCount - 1;
-//        
-//        CGPathMoveToPoint(path, NULL, CGRectGetMinX(rectArray[0]) + halfLineWidth, CGRectGetMaxY(rectArray[0]) + halfLineWidth);
-//        
-//        CGPathAddLineToPoint(path, NULL, CGRectGetMinX(rectArray[0]) + halfLineWidth, CGRectGetMinY(rectArray[0]) + halfLineWidth);
-//        CGPathAddLineToPoint(path, NULL, CGRectGetMaxX(rectArray[0]) - halfLineWidth, CGRectGetMinY(rectArray[0]) + halfLineWidth);
-//        
-//        CGPathAddLineToPoint(path, NULL, CGRectGetMaxX(rectArray[0]) - halfLineWidth, CGRectGetMinY(rectArray[lastRect]) - halfLineWidth);
-//        CGPathAddLineToPoint(path, NULL, CGRectGetMaxX(rectArray[lastRect]) - halfLineWidth, CGRectGetMinY(rectArray[lastRect]) - halfLineWidth);
-//        
-//        CGPathAddLineToPoint(path, NULL, CGRectGetMaxX(rectArray[lastRect]) - halfLineWidth, CGRectGetMaxY(rectArray[lastRect]) - halfLineWidth);
-//        CGPathAddLineToPoint(path, NULL, CGRectGetMinX(rectArray[lastRect]) + halfLineWidth, CGRectGetMaxY(rectArray[lastRect]) - halfLineWidth);
-//        
-//        CGPathAddLineToPoint(path, NULL, CGRectGetMinX(rectArray[lastRect]) + halfLineWidth, CGRectGetMaxY(rectArray[0]) + halfLineWidth);
-//        CGPathCloseSubpath(path);
-//    }
     
     [color set]; // set fill and stroke color
     
     CGContextRef ctx = UIGraphicsGetCurrentContext();
-//    
-//    CGContextSetAllowsAntialiasing(ctx, YES);
-//    CGContextSetShouldAntialias(ctx, YES);
+    
+    CGContextSetAllowsAntialiasing(ctx, YES);
+    CGContextSetShouldAntialias(ctx, YES);
     
     CGContextSetLineJoin(ctx, kCGLineJoinRound);
     

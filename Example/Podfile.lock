@@ -6,9 +6,9 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   MSTagTextView:
-    :path: "../"
+    :path: ../
 
 SPEC CHECKSUMS:
   MSTagTextView: 5367dd091ed0f1436e6fba64a1abb19a09cef874
 
-COCOAPODS: 0.38.2
+COCOAPODS: 0.39.0

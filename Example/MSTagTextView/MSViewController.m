@@ -10,7 +10,7 @@
 #import "MSTagTextView.h"
 @interface MSViewController () <MSTagTextViewDataSource>
 @property (weak, nonatomic) IBOutlet MSTagTextView *tagView;
-
+@property (assign, nonatomic) int num;
 @end
 
 @implementation MSViewController
@@ -18,26 +18,21 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    _num = 0;
     self.tagView.dataSource = self;
     [self.tagView setFont:[UIFont systemFontOfSize:17.0]];
-    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
-    [paragraphStyle setLineSpacing:10];
-    
-    NSDictionary *attrsDictionary = [NSDictionary dictionaryWithObject:paragraphStyle forKey:NSParagraphStyleAttributeName];
-    
-    [self.tagView setTypingAttributes:attrsDictionary];
-    self.tagView.layoutManager.delegate = self;
-}
-
-- (CGFloat)layoutManager:(NSLayoutManager *)layoutManager lineSpacingAfterGlyphAtIndex:(NSUInteger)glyphIndex withProposedLineFragmentRect:(CGRect)rect
-{
-    return 20; // For really wide spacing; pick your own value
+    [self.tagView setEditable:NO];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)onButtonPressed:(id)sender {
+    _num++;
+    [self.tagView reloadData];
+    [self.tagView setFont:[UIFont systemFontOfSize:17.0]];
 }
 
 -(int) tagTextViewNumberOfTags:(MSTagTextView*)tagTextView;
@@ -46,24 +41,24 @@
 }
 -(NSString*) tagTextView:(MSTagTextView*)tagTextView stringForItemAtIndex:(int)index;
 {
-    switch (index) {
+    switch ((index+_num)%6) {
         case 0:
             return @"Hello";
         case 1:
-            return @"Hello1";
+            return @"I want to say Hello";
         case 2:
-            return @"Hi HI hi h i n an lgn 2 matematica";
+            return @"One two three four five six seven eight nine ten";
         case 3:
             return @"MeSeems";
         case 4:
-            return @"me2";
+            return @"Eleven Twelve Thirteen Fourteen Fifteen Sixteen Seventeen Eighteen Nineteen Twenty";
         default:
             return @"Goodbye";
     }
 }
 -(UIColor*) tagTextView:(MSTagTextView*)tagTextView colorForItemAtIndex:(int)index;
 {
-    switch (index%3) {
+    switch ((index+_num)%3) {
         case 0:
             return [UIColor redColor];
         case 1:

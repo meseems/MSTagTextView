@@ -9,21 +9,20 @@
 Pod::Spec.new do |s|
   s.name             = "MSTagTextView"
   s.version          = "0.1.0"
-  s.summary          = "A short description of MSTagTextView."
+  s.summary          = "Implementation of MSTagTextView."
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
 #   * Try to keep it short, snappy and to the point.
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!  
-  s.description      = <<-DESC
-                       DESC
+  s.description      = "MSTagTextView is an implementation that allows tags to be displayed in multi-line textviews. This implementation was devised for performance, so it can be used in tableview cells."
 
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/MSTagTextView"
+  s.homepage         = "https://github.com/meseems/MSTagTextView"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "nickmm" => "nickmm@mit.edu" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/MSTagTextView.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/meseems/MSTagTextView.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.platform     = :ios, '7.0'
